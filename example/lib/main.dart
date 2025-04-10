@@ -120,18 +120,31 @@ class _MyAppState extends State<MyApp> {
           backgroundColor:Color(0xFF000022),
           foregroundColor: Colors.blueAccent,
           actions: [
-            TextButton(
-                onPressed: () {
-                  setState(() {
-                    epcData.clear();
-                    epcSet.clear();
-                    epcCount = 0;
-                  }
-                  );},
-                style: ButtonStyle(
-                  foregroundColor: WidgetStateProperty.all<Color>(Colors.amber),
+            Padding(
+              padding: const EdgeInsets.only(right: 8.0),
+              child: SizedBox(
+                height: 33,
+                child: InputChip(
+                    onPressed: () {
+                      setState(() {
+                        epcData.clear();
+                        epcSet.clear();
+                        epcCount = 0;
+                      }
+                      );},
+                    side: BorderSide(
+                      color: Colors.transparent,
+                    ),
+                    color: WidgetStateProperty.all<Color>(Colors.blueAccent),
+                    visualDensity: VisualDensity.compact,
+                    label: Text(
+                        'Clear',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(color: Color(0xFF000022),
+                        )
+                    )
                 ),
-                child: Text('Clear')
+              ),
             )
           ],
         ),
