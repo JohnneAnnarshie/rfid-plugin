@@ -292,7 +292,7 @@ class _MyAppState extends State<MyApp> {
                       color: isScanning ? Color(0xFF3A3A3A) : Color(0xFFF4AD1A),
                     )
               )),
-              OutlinedButton(onPressed: () async {
+              OutlinedButton(onPressed: isScanning? null : () async {
                 final isDisconnected = await _rfidreaderpluginPlugin.disconnectReader();
                 print(isDisconnected);
                 setState(() {
