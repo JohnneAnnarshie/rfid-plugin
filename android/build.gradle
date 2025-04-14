@@ -44,11 +44,11 @@ android {
     }
 
     defaultConfig {
-        minSdk = 24
+        minSdk = 26
     }
 
     dependencies {
-        implementation(project(":DeviceList"))
+        implementation(project("DeviceList"))
         implementation(project("Rfid.AsciiProtocol-Library"))
         implementation("androidx.localbroadcastmanager:localbroadcastmanager:1.1.0")
         testImplementation("org.jetbrains.kotlin:kotlin-test")

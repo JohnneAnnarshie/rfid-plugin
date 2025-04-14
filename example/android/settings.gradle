@@ -24,4 +24,4 @@ plugins {
 
 include ":app"
 include ':rfidreaderplugin:Rfid.AsciiProtocol-Library'
-include ':DeviceList'
+include ':rfidreaderplugin:DeviceList'
